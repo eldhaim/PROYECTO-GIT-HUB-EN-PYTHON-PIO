@@ -1,4 +1,4 @@
-# Lista inicial
+# Lista inicial - COMETARIO
 lista = [1, 2, 3]
 
 # 1. Usar append() para agregar un solo elemento al final de la lista
