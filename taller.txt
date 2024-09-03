@@ -1,0 +1,148 @@
+1. Calculadora Básica en Python:
+# Calculadora básica en Python
+
+# Entrada de datos
+num1 = float(input("Ingresa el primer número: "))
+num2 = float(input("Ingresa el segundo número: "))
+operacion = input("Ingresa la operación a realizar (+, -, *, /): ")
+
+# Evaluación de la operación
+if operacion == "+":
+    resultado = num1 + num2
+    print(f"El resultado de la suma es: {resultado}")
+elif operacion == "-":
+    resultado = num1 - num2
+    print(f"El resultado de la resta es: {resultado}")
+elif operacion == "*":
+    resultado = num1 * num2
+    print(f"El resultado de la multiplicación es: {resultado}")
+elif operacion == "/":
+    if num2 != 0:
+        resultado = num1 / num2
+        print(f"El resultado de la división es: {resultado}")
+    else:
+        print("Error: No se puede dividir por cero.")
+else:
+    print("Operación no válida.")
+
+
+
+Explicación:
+Entrada de Datos:
+
+input("Ingresa el primer número: ") solicita al usuario que ingrese un número. La función float() convierte esta entrada en un número decimal y lo almacena en num1.
+Se repite el proceso para num2 y para la operación deseada.
+Evaluación de la Operación:
+
+if operacion == "+": Si la operación es suma, se realiza la suma y se almacena el resultado en resultado.
+elif operacion == "-": Si la operación es resta, se realiza la resta.
+elif operacion == "*": Si la operación es multiplicación, se realiza la multiplicación.
+elif operacion == "/": Si la operación es división, se realiza la división, pero se verifica que num2 no sea cero para evitar errores.
+else: Si la operación no es reconocida, se muestra un mensaje indicando que la operación no es válida.
+
+
+2. Clasificación de Temperatura en Python:
+# Clasificación de temperatura en Python
+
+# Entrada de datos
+temperatura = float(input("Ingresa la temperatura en grados Celsius: "))
+
+# Clasificación de la temperatura
+if temperatura < 10:
+    print("Hace frío.")
+elif temperatura > 25:
+    print("Hace calor.")
+else:
+    print("Está templado.")
+
+Explicación:
+Entrada de Datos:
+
+input("Ingresa la temperatura en grados Celsius: ") solicita al usuario que ingrese la temperatura. La función float() convierte esta entrada en un número decimal y lo almacena en temperatura.
+Clasificación de la Temperatura:
+
+if temperatura < 10: Si la temperatura es menor a 10°C, se considera "frío" y se muestra el mensaje correspondiente.
+elif temperatura > 25: Si la temperatura es mayor a 25°C, se considera "calor".
+else: Si la temperatura está entre 10°C y 25°C (inclusive), se considera "templado".
+Estos algoritmos permiten realizar cálculos básicos y clasificar temperaturas, utilizando estructuras condicionales (if, elif, else) para tomar decisiones en función de las entradas del usuario.
+
+
+
+1. Calculadora Básica en Psint:
+
+Algoritmo calculadoraBasica
+    Definir num1, num2, resultado Como Real
+    Definir operacion Como Caracter
+    
+    Escribir "Ingresa el primer número:"
+    Leer num1
+    Escribir "Ingresa el segundo número:"
+    Leer num2
+    
+    Escribir "Ingresa la operación a realizar (+, -, *, /):"
+    Leer operacion
+    
+    Si operacion = "+" Entonces
+        resultado = num1 + num2
+        Escribir "El resultado de la suma es: ", resultado
+    Sino_Si operacion = "-" Entonces
+        resultado = num1 - num2
+        Escribir "El resultado de la resta es: ", resultado
+    Sino_Si operacion = "*" Entonces
+        resultado = num1 * num2
+        Escribir "El resultado de la multiplicación es: ", resultado
+    Sino_Si operacion = "/" Entonces
+        Si num2 <> 0 Entonces
+            resultado = num1 / num2
+            Escribir "El resultado de la división es: ", resultado
+        Sino
+            Escribir "Error: No se puede dividir por cero."
+        FinSi
+    Sino
+        Escribir "Operación no válida."
+    FinSi
+FinAlgoritmo
+
+
+Explicación:
+Entrada de Datos:
+
+Escribir "Ingresa el primer número:" y Leer num1: Solicitan al usuario ingresar el primer número y lo almacenan en la variable num1.
+Similar para num2.
+Escribir "Ingresa la operación a realizar (+, -, *, /):" y Leer operacion: Solicitan al usuario ingresar el operador de la operación matemática y lo almacenan en la variable operacion.
+Evaluación de la Operación:
+
+Si operacion = "+" Entonces: Si el operador es +, realiza la suma y muestra el resultado.
+Sino_Si operacion = "-" Entonces: Si el operador es -, realiza la resta.
+Sino_Si operacion = "*" Entonces: Si el operador es *, realiza la multiplicación.
+Sino_Si operacion = "/" Entonces: Si el operador es /, realiza la división. Se añade una verificación Si num2 <> 0 Entonces para asegurar que el divisor no sea cero y evitar errores. Si num2 es cero, muestra un mensaje de error.
+Sino: Si el operador no es reconocido, muestra un mensaje indicando que la operación no es válida.
+
+
+2. Clasificación de Temperatura en Psint:
+
+Algoritmo clasificacionTemperatura
+    Definir temperatura Como Real
+    
+    Escribir "Ingresa la temperatura en grados Celsius:"
+    Leer temperatura
+    
+    Si temperatura < 10 Entonces
+        Escribir "Hace frío."
+    Sino_Si temperatura > 25 Entonces
+        Escribir "Hace calor."
+    Sino
+        Escribir "Está templado."
+    FinSi
+FinAlgoritmo
+
+
+Explicación:
+Entrada de Datos:
+
+Escribir "Ingresa la temperatura en grados Celsius:" y Leer temperatura: Solicitan al usuario ingresar la temperatura en grados Celsius y la almacenan en la variable temperatura.
+Clasificación de la Temperatura:
+
+Si temperatura < 10 Entonces: Si la temperatura es menor a 10°C, muestra el mensaje "Hace frío".
+Sino_Si temperatura > 25 Entonces: Si la temperatura es mayor a 25°C, muestra el mensaje "Hace calor".
+Sino: Si la temperatura está entre 10°C y 25°C (inclusive), muestra el mensaje "Está templado".

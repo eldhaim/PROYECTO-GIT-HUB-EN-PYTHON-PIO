@@ -1,0 +1,86 @@
+# Diccionario de contactos
+contactos = {
+    'Angel Roman': {
+        'email': 'angelRoman@gmail.com',
+        'telefonos': ['3157789632', '3032689456']
+    },
+    'Ana García': {
+        'email': 'anagarcia@gmail.com',
+        'telefonos': ['3108369171', '3136248964', '32459813313']
+    }
+}
+
+while True:
+    print("\n--- Menú de Contactos ---")
+    print("1. Mostrar todos los contactos")
+    print("2. Agregar un nuevo contacto")
+    print("3. Actualizar un contacto existente")
+    print("4. Eliminar un contacto")
+    print("5. Salir")
+    opcion = input("Seleccione una opción (1-5): ")
+
+    if opcion == '1':
+        # Mostrar todos los contactos
+        if contactos:
+            for nombre, info in contactos.items():
+                print(f"\nNombre: {nombre}")
+                print(f"Email: {info['email']}")
+                print("Teléfonos: " + ", ".join(info['telefonos']))
+        else:
+            print("No hay contactos en la lista.")
+
+    elif opcion == '2':
+        # Agregar un nuevo contacto
+        nombre = input("Ingrese el nombre del contacto: ")
+        if nombre in contactos:
+            print("El contacto ya existe.")
+        else:
+            email = input("Ingrese el email del contacto: ")
+            telefonos = []
+            while True:
+                telefono = input("Ingrese un número de teléfono (o 'q' para terminar): ")
+                if telefono.lower() == 'q':
+                    break
+                if len(telefono) > 10 or len(telefono) < 10:
+                    print("ERROR: Un numero de teléfono está compuesto por 10 numeros")
+                else:
+                    telefonos.append(telefono)
+            contactos[nombre] = {'email': email, 'telefonos': telefonos}
+            print(f"Contacto {nombre} agregado correctamente.")
+
+    elif opcion == '3':
+        # Actualizar un contacto existente
+        nombre = input("Ingrese el nombre del contacto a actualizar: ")
+        if nombre in contactos:
+            email = input(f"Ingrese el nuevo email para {nombre} (dejar vacío para no cambiar): ")
+            if email:
+                contactos[nombre]['email'] = email
+            telefonos = input("¿Desea actualizar los teléfonos? (s/n): ")
+            if telefonos.lower() == 's':
+                nuevos_telefonos = []
+                while True:
+                    telefono = input("Ingrese un número de teléfono (o 'q' para terminar): ")
+                    if telefono.lower() == 'q':
+                        break
+                    nuevos_telefonos.append(telefono)
+                contactos[nombre]['telefonos'] = nuevos_telefonos
+            print(f"Contacto {nombre} actualizado correctamente.")
+        else:
+            print("El contacto no existe.")
+
+    elif opcion == '4':
+        # Eliminar un contacto
+        nombre = input("Ingrese el nombre del contacto a eliminar: ")
+        if nombre in contactos:
+            del contactos[nombre]
+            print(f"Contacto {nombre} eliminado correctamente.")
+        else:
+            print("El contacto no existe.")
+
+    elif opcion == '5':
+        # Salir
+        print("Saliendo del programa...")
+        break
+
+    else:
+        print("Opción no válida. Por favor, intente nuevamente.")
